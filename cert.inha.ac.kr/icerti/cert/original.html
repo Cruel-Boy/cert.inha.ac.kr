@@ -23,14 +23,14 @@
 <link rel="stylesheet" href="/icerti/css/new/jquery.bxslider.css" />
 <link rel="stylesheet" href="/icerti/css/new/font-awesome.min.css" />
 <link rel="stylesheet" href="/icerti/css/nanum-gothic/webfont.css" />
-<script src="/icerti/js/new/jquery-1.12.4.min.js"></script>
-<script src="/icerti/js/new/jquery-ui.min.js"></script>
-<script src="/icerti/js/new/jquery.bxslider.js"></script>
-<script src="/icerti/js/new/bootstrap.min.js"></script>
-<script src="/icerti/js/jquery/jquery.cookie.js"></script>
-<script src="/icerti/js/new/menuscript.js?20210909"></script>
-<script src="/icerti/js/common/inapp.js?5"></script>
-<script src="/icerti/js/common/voice.js"></script>
+<script src="../icerti/js/new/jquery-1.12.4.min.js"></script>
+<script src="../icerti/js/new/jquery-ui.min.js"></script>
+<script src="../icerti/js/new/jquery.bxslider.js"></script>
+<script src="../icerti/js/new/bootstrap.min.js"></script>
+<script src="../icerti/js/jquery/jquery.cookie.js"></script>
+<script src="../icerti/js/new/menuscript.js?20210909"></script>
+<script src="../icerti/js/common/inapp.js?5"></script>
+<script src="../icerti/js/common/voice.js"></script>
 <script>
 var deviceType="PC";
 var agent = navigator.userAgent;
@@ -82,9 +82,9 @@ function notifyLogin(){
             <div id="nowTimes"></div>
             <ul class="top-menu-utill">
                 <li><a href="https://pf.kakao.com/_pIdhu" target="kakao" title="아이콘을 클릭하시면 카카오톡 1:1상담으로 연결됩니다.&#13;&#10;(평일 09시~18시 / 점심12~13시)" style="background-color:yellow;font-weight:800;font-size:13px;padding:3px 5px;"><img src="/icerti/common/img/kakao/kakao-talk.png" border="0" style="width:30px;margin-left:-11px;"> 상담</a></li>
-                <li><a href="/icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
+                <li><a href="../icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
 
-                	<li><a href="/icerti/auth/login.lgn?cmd=loginForm">로그인</a></li>
+                	<li><a href="../icerti/auth/login.lgn?cmd=loginForm">로그인</a></li>
 
                 <li>
                     <select name="lang" id="lang" class="language">
@@ -107,7 +107,7 @@ function notifyLogin(){
     <div class="navbar nav-default" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <h1 class="logo"><a href="/icerti/index.jsp"><img src="/icerti/common/img/logo.png" alt="인하대학교"></a></h1>
+                <h1 class="logo"><a href="../icerti/index.jsp"><img src="/icerti/common/img/logo.png" alt="인하대학교"></a></h1>
             </div>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -120,19 +120,19 @@ function notifyLogin(){
                     <li class="dropdown">
                         <a id="menu_1_0" href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">증명서발급</a>
                         <ul role="menu" class="dropdown-menu">
-                        	<li><a id="menu_1_1" href="/icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
-                            <li><a id="menu_1_2" href="/icerti//cert/certificateInfo.cert?cmd=getIssuedCondtionListAsColumn&method=internet">증명서 신청</a></li>
-                            <li><a id="menu_1_3" href="/icerti/cert/certificateStore.cert?cmd=getCertificateListFromStore">증명서 보관함</a></li>
+                        	<li><a id="menu_1_1" href="../icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
+                            <li><a id="menu_1_2" href="../icerti//cert/certificateInfo.cert?cmd=getIssuedCondtionListAsColumn&method=internet">증명서 신청</a></li>
+                            <li><a id="menu_1_3" href="../icerti/cert/certificateStore.cert?cmd=getCertificateListFromStore">증명서 보관함</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a id="menu_2_1" href="https://www.inha.ac.kr/kr/1855/subview.do" target="_blank" class="dropdown-toggle">우편발송</a>
                     </li>
                     <li class="dropdown">
-                        <a id="menu_3_1" href="/icerti//cert/original.cert?cmd=compareOriginalForm"  class="dropdown-toggle">원본대조</a>
+                        <a id="menu_3_1" href="../icerti//cert/original.cert?cmd=compareOriginalForm"  class="dropdown-toggle">원본대조</a>
                     </li>
                     <li class="dropdown">
-                        <a id="menu_4_0" href="/icerti/jsp/main/user/supportcenter.jsp" class="dropdown-toggle" data-toggle="dropdown">고객센터</a>
+                        <a id="menu_4_0" href="../icerti/jsp/main/user/supportcenter.jsp" class="dropdown-toggle" data-toggle="dropdown">고객센터</a>
                         <ul role="menu" class="dropdown-menu">
                         <li><a id="menu_4_1" href="/icerti/jsp/main/user/supportcenter.jsp">고객센터</a></li>
                         <li><a id="menu_4_2" href="/icerti/jsp/main/user/faqs/FAQ_01.jsp">FAQ</a></li>
@@ -216,7 +216,7 @@ $(function() {
 <div id="content" class="swbg">
     <div class="container">
         <ul class="directory hidden-xs hidden-sm">
-            <li><img src="/icerti/common/img/home.png" alt="home"></li>
+            <li><img src="../icerti/common/img/home.png" alt="home"></li>
             <li>원본대조</li>
         </ul>
         <div class="title">
@@ -237,7 +237,7 @@ $(function() {
                   </ul>
                 </li>
 
-		<li style="padding-left:0">* <a href="/icerti/jsp/main/user/faqs/FAQ_01.jsp?tab=4&q=4#q-4-4">고객센터 - FAQ - 전자문서검증 - 증명서 진본확인 프로그램 설치 바로가기</a></li>
+		<li style="padding-left:0">* <a href="../icerti/jsp/main/user/faqs/FAQ_01.jsp?tab=4&q=4#q-4-4">고객센터 - FAQ - 전자문서검증 - 증명서 진본확인 프로그램 설치 바로가기</a></li>
 
               </ol>
             </div>
