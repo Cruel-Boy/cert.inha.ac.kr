@@ -1,0 +1,4195 @@
+@charset "utf-8";
+p,
+ul,
+ol,
+dl {
+    margin-bottom: 0;
+}
+
+.red {
+    color: red;
+}
+
+.black {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.gray {
+    color: gray;
+}
+
+.left {
+    text-align: left
+}
+
+#nowTimes {
+    display: none;
+    float: left;
+    margin: 9px 0 0 18px;
+    color: white !important;
+    line-height: 28px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    background-color: #2178cd;
+    box-shadow: 2px 2px 4px 1px #b3b3b3
+}
+
+#nowTimes a {
+    color: white;
+    text-decoration: none
+}
+
+#content.swbg {
+    margin-bottom: 30px;
+}
+
+/*********************
+ 메인
+*********************/
+
+#main_slider {
+    width: 100%;
+    max-height: 780px;
+}
+
+#main_slider .slide li {
+    height: 550px;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+#main_slider .slide .one {
+    text-align: center;
+    color: #fff;
+    background: url(/icerti/common/img/main_slider_01.jpg) center;
+    background-size: cover;
+}
+
+#main_slider .slide .two {
+    text-align: center;
+    color: #fff;
+    background: url(/icerti/common/img/main_slider_02.jpg) center;
+    background-size: cover;
+}
+
+#main_slider .slide .one .tit,
+#main_slider .slide .two .tit {
+    padding-top: 70px;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#main_slider .slide .one .slogan,
+#main_slider .slide .two .slogan {
+    font-size: 30px;
+    font-weight: bolder
+}
+
+#main_slider .slide .one a,
+#main_slider .slide .two a {
+    display: block;
+    margin: 75px auto;
+    width: 270px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    border: 2px solid #fff;
+    color: #fff;
+    box-shadow: 2px 2px 2px 1px #333;
+    border-radius: 5px;
+}
+
+#main_slider .slide .one a:hover,
+#main_slider .slide .two a:hover {
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s
+}
+
+#main_slider .bx-wrapper .bx-controls-direction a {
+    width: 38px;
+    height: 70px
+}
+
+#main_slider .bx-wrapper .bx-prev {
+    background-image: url(/icerti/common/img/prev.png);
+}
+
+#main_slider .bx-wrapper .bx-next {
+    background-image: url(/icerti/common/img/next.png);
+}
+
+@media screen and (max-width:760px) {
+    #main_slider .slide li {
+        height: auto;
+        padding-top: 0;
+    }
+    #main_slider li {
+        padding: 30px 0;
+        height: auto;
+    }
+    #main_slider .slide .one .tit,
+    #main_slider .slide .two .tit {
+        padding-top: 80px;
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+    #main_slider .slide .one .slogan,
+    #main_slider .slide .two .slogan {
+        font-size: 18px;
+        word-break: keep-all;
+    }
+    #main_slider .slide .one a,
+    #main_slider .slide .two a {
+        font-size: 13px;
+        width: 190px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* 메인컨텐츠 공통부분 */
+
+#main_cont {
+    letter-spacing: -0.08em;
+}
+
+#main_cont .stit {
+    font-size: 18px;
+    font-style: normal;
+}
+
+#main_cont .tit {
+    margin-top: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'NanumSquare', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 3px;
+}
+
+#main_cont .tit:after {
+    content: '';
+    display: block;
+    margin-top: 25px;
+    width: 50px;
+    height: 3px;
+    background-color: #333;
+}
+
+#main_cont .txt {
+    margin-top: 35px;
+    color: #888;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#main_cont .main_btn {
+    display: block;
+    border: 2px solid #333;
+    margin-top: 50px;
+    text-align: center;
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    color: #333;
+}
+
+#main_cont .main_btn.black {
+    border: 2px solid white;
+    color: #000;
+    background-color: white
+}
+
+#main_cont .main_btn.wh {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#main_cont .main_btn:hover {
+    background: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#main_cont .main_btn.wh:hover {
+    background: #fff;
+    color: #333;
+}
+
+#main_cont .main_btn.black:hover {
+    background: #000;
+    color: #fff;
+    border: 2px solid black;
+}
+
+#main_cont .img {
+    text-align: center;
+}
+
+@media screen and (max-width:760px) {
+    #main_cont {
+        text-align: center;
+    }
+    #main_cont img {
+        display: block;
+        margin: auto;
+        width: 170px;
+    }
+    #main_cont .stit {
+        display: none;
+    }
+    #main_cont .tit {
+        font-size: 30px;
+    }
+    #main_cont .tit:after {
+        display: none;
+    }
+    #main_cont .txt {
+        font-size: 15px;
+        word-break: keep-all;
+    }
+    #main_cont .main_btn {
+        width: 190px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 13px;
+        margin: 20px auto 0;
+    }
+    #main_cont #main_original .tit {
+        margin-top: 0;
+    }
+}
+
+/* 증명서 발급 > 증명서 보관함*/
+
+#main_cert {
+    padding: 40px 0;
+    background-color: #fff;
+    background-image: url(/icerti/common/img/bg_pt.png);
+    background-position: 150px top;
+    background-repeat: no-repeat;
+}
+
+/* 증명서 원본대조 */
+
+#main_original {
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    background: url(/icerti/common/img/in_bg.png) no-repeat center;
+    background-size: cover;
+}
+
+#main_original .txt {
+    color: #fff;
+}
+
+#main_original .tit:after {
+    margin: 25px auto;
+    background-color: #fff;
+}
+
+#main_original .main_btn {
+    margin: 50px auto 0;
+}
+
+/*우편발송*/
+
+#main_post {
+    padding: 40px 0;
+    background: #fff url(/icerti/common/img/bg_pt.png) right top no-repeat;
+}
+
+/*바로가기*/
+
+#main_shortcuts {
+    padding: 40px 0;
+    text-align: center;
+    background: url(/icerti/common/img/in_bgg.png) center;
+    background-size: cover;
+}
+
+#main_shortcuts article img {
+    display: block;
+    margin: auto;
+    max-width: 180px;
+    width: 100%;
+}
+
+#main_shortcuts article a {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+#main_shortcuts article .short_a_img img {
+    margin-bottom: 35px
+}
+
+#main_shortcuts .tit:after {
+    margin: 25px auto;
+}
+
+@media screen and (max-width:760px) {
+    #main_cert,
+    #main_post,
+    #main_shortcuts {
+        padding: 25px 0;
+    }
+    #main_original {
+        padding: 45px 0;
+    }
+    #main_post .post_inner {
+        display: inline-flex;
+        flex-direction: column-reverse;
+    }
+    #main_shortcuts em {
+        font-size: 15px
+    }
+    #main_shortcuts h2 {
+        font-size: 30px;
+        margin-bottom: 35px;
+        margin-top: 10px
+    }
+    #main_shortcuts h2:after {
+        display: none;
+    }
+    #main_shortcuts article {
+        margin: 20px 0;
+        float: left;
+        width: 50%;
+    }
+    #main_shortcuts article img {
+        display: block;
+        margin: auto;
+    }
+    #main_shortcuts article a {
+        font-size: 16px;
+    }
+    #main_shortcuts article .short_a_img img {
+        margin-bottom: 20px
+    }
+}
+
+/*********************
+ 서브공통
+*********************/
+
+/* 주의사항 상단 */
+
+.exp {
+    margin-bottom: 40px;
+    width: 100%;
+    display: table;
+    background-color: #f3f3f3;
+    border-top: 1px solid #666;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+    @media screen and (max-width: 400px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .fa-volume-up {
+            font-size: 20px !important;
+        }
+    }
+}
+
+.exp_center {
+    /* margin-bottom: 40px;
+	width: 100%; */
+    display: table;
+    background-color: #f3f3f3;
+    border-top: 1px solid #666;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.exp .exp_icon {
+    float: inherit;
+    vertical-align: middle;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    color: #284e75;
+    font-size: 34px;
+    width: 10%;
+    min-width: 80px;
+    @media screen and (max-width: 400px) {
+        width: 100%;
+    }
+}
+
+.exp .exp_icon #sayMsgIcon {
+    color: #171bbd;
+    font-size: 30px;
+}
+
+.exp .exp_text {
+    position: relative;
+    padding: 2% 10px 2% 25px;
+    background: #f9f9f9;
+    display: table-cell;
+    margin: 2px;
+    width: 100%;
+    width: -webkit-fill-available;
+}
+
+.exp .exp_text li {
+    line-height: 1.8;
+    text-align: left
+}
+
+.exp .exp_text ul li {
+    font-size: 13px;
+    list-style: square
+}
+
+.exp .exp_text ul li span {
+    color: #ff0000
+}
+
+.exp .exp_text ol {
+    list-style: none;
+}
+
+.exp .exp_text ol>li {
+    padding-left: 75px;
+    position: relative;
+    font-size: 15px;
+}
+
+.exp .exp_text ol li span {
+    display: block;
+    padding: 3px 8px;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    background: #284e75;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.exp .exp_text ol li ul {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.exp .exp_text ol li li {}
+
+.exp .exp_btn {
+    display: inline-block;
+    width: 210px;
+    height: 50px;
+    line-height: 50px;
+    background: #284e75;
+    color: #fff;
+    text-align: center;
+}
+
+@media all and (min-width:700px) and (max-width:800px) {
+    .cert_box .cert_bxTop {
+        font-size: 12px !important
+    }
+}
+
+@media all and (min-width:800px) and (max-width:960px) {
+    .cert_box .cert_bxTop {
+        font-size: 13px !important
+    }
+    .process .proce_th {
+        font-size: 18px !important
+    }
+    .process li {
+        font-size: 14px !important
+    }
+}
+
+@media screen and (min-width:960px) {
+    .exp .exp_btn {
+        position: absolute;
+        margin-top: -25px;
+        top: 50%;
+        right: 15px;
+    }
+    .cert_box .cert_bxTop {
+        font-size: 14px !important
+    }
+    .process .proce_th {
+        font-size: 18px !important
+    }
+    .process li {
+        font-size: 15px !important
+    }
+}
+
+@media screen and (max-width:760px) {
+    .exp .exp_text ul li {
+        font-size: 13px;
+    }
+    .exp .exp_btn {
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        left: 0;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .exp .exp_text ol>li {
+        margin-bottom: 10px;
+        padding-left: 0;
+        font-size: 13px;
+    }
+    .exp .exp_text ol>li span {
+        position: relative;
+        display: block;
+        width: 60px;
+        text-align: center;
+    }
+}
+
+/* 탭 */
+
+.tab_container {
+    width: 100%;
+    margin: auto;
+}
+
+ul.tabs.dir {
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+ul.tabs.dir li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+    display: block;
+    float: left;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+ul.tabs.dir li:first-child {
+    margin-left: 0;
+}
+
+ul.tabs.dir li.current {
+    background: #333;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 65px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+ul.choice_tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 100%;
+    margin: auto;
+    height: 60px
+}
+
+ul.choice_tabs li {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #333;
+    border: 2px solid #333;
+    display: block;
+    float: left;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: -2px;
+    box-sizing: border-box;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+ul.choice_tabs li:first-child {
+    margin-left: 0;
+}
+
+ul.choice_tabs li.current {
+    position: relative;
+    background: #333;
+    color: #fff;
+}
+
+ul.choice_tabs li.current:after {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -8px;
+    overflow: hidden;
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #333;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.choice_tab-content {
+    display: none;
+    margin: 40px 0;
+}
+
+.choice_tab-content.current {
+    display: inherit;
+}
+
+@media screen and (max-width:760px) {
+    ul.choice_tabs li {
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+        font-size: 13px;
+        border: 0;
+        background-color: #f5f5f5;
+        color: #888;
+        letter-spacing: -1px;
+        font-family: 'Malgun Gothic', sans-serif;
+    }
+    .tab-content {
+        margin-top: 30px;
+    }
+}
+
+/* 버튼 */
+
+.btn_wrap {
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn_wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.btn_wrap .btn {
+    display: inline-block;
+    min-width: 120px;
+    height: 50px;
+    border-radius: 0;
+    font-size: 15px;
+    padding: 0 30px;
+}
+
+.btn_wrap .btn:hover {
+    transition: all 0.3s;
+}
+
+.btn_wrap .btn_lef {
+    float: left;
+}
+
+.btn_wrap .btn_rig {
+    float: right;
+}
+
+.btn_wrap .btn.btn_style1 {
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+.btn_wrap .btn.btn_style1:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn_wrap .btn.btn_style2 {
+    background-color: #284e75;
+    border: 2px solid #284e75;
+    color: #fff;
+}
+
+.btn_wrap .btn.btn_style2:hover {
+    background-color: #fff;
+    color: #284e75;
+}
+
+.btn_wrap select,
+.btn_wrap input {
+    margin-right: 3px;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #ddd;
+    text-indent: 1em;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.btn_wrap .btn#reset {
+    width: 180px;
+}
+
+.btn_wrap input.email {
+    width: 300px;
+}
+
+@media all and (max-width:720px) {
+    .btn_wrap .btn_lef,
+    .btn_wrap .btn_rig {
+        float: inherit;
+    }
+    .btn_wrap .btn {
+        width: 100% !important;
+        font-size: 13px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    .btn_wrap select,
+    .btn_wrap input {
+        width: 100% !important;
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+/*********************
+ 증명서발급
+*********************/
+
+/* 증명서 발급 > 증명서 선택 */
+
+/* 발급가능한 증서 */
+
+/* 결제 금액 확인 */
+
+/* 증명서 발급 > 증명서 보관함 */
+
+.cert_box {
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #666
+}
+
+.cert_box .cert_bxTop {
+    background-color: #f5f5f5;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.cert_box .cert_bxTop ul li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.cert_box ul {
+    overflow: hidden;
+    text-align: center;
+}
+
+.cert_box ul li {
+    float: left;
+    width: 7%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+}
+
+.cert_box ul li.ko,
+.cert_box ul li.en {
+    position: relative;
+    text-align: left;
+    padding-left: 36px;
+}
+
+.cert_box ul li.ko:before {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    content: '';
+    display: block;
+    float: left;
+    background-image: url(/icerti/common/img/ko.png);
+    width: 27px;
+    height: 27px;
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cert_box ul li.en:before {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    content: '';
+    display: block;
+    float: left;
+    background-image: url(/icerti/common/img/en.png);
+    width: 27px;
+    height: 27px;
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cert_box ul li.print,
+.cert_box ul li.printed {
+    position: relative;
+}
+
+.cert_box ul li.print:before {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 8px;
+    content: 'Print';
+    display: block;
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: bold;
+    border: 1px solid #333;
+}
+
+.cert_box ul li.printed:before {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 8px;
+    content: 'Printed';
+    display: block;
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    color: #bbbbbb
+}
+
+.cert_box p {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.cert_list_prt li:first-child {
+    width: 34%
+}
+
+.cert_list_prt li:nth-child(2) {
+    width: 12%
+}
+
+.cert_list_prt li:nth-child(3),
+.cert_list_prt li:nth-child(4) {
+    width: 7%
+}
+
+.cert_list_prt li:nth-child(5) {
+    width: 12%
+}
+
+.cert_list_prt li:last-child {
+    width: 28%
+}
+
+.cert_list_fax li:first-child {
+    width: 25%
+}
+
+.cert_list_fax li:nth-child(2),
+.cert_list_fax li:nth-child(3) {
+    width: 12%
+}
+
+.cert_list_fax li:nth-child(4) {
+    width: 17%
+}
+
+.cert_list_fax li:nth-child(5) {
+    width: 22%
+}
+
+.cert_list_fax li:last-child {
+    width: 12%
+}
+
+.cert_list_email li:first-child {
+    width: 24%
+}
+
+.cert_list_email li:nth-child(2),
+.cert_list_email li:nth-child(3),
+.cert_list_email li:nth-child(4) {
+    width: 12%
+}
+
+.cert_list_email li:nth-child(5) {
+    width: 18%
+}
+
+.cert_list_email li:nth-child(6) {
+    width: 10%
+}
+
+.cert_list_email li:last-child {
+    width: 12%
+}
+
+.cert_list li:first-child {
+    width: 34%
+}
+
+.cert_list li:nth-child(2) {
+    width: 12%
+}
+
+.cert_list li:nth-child(3),
+.cert_list li:nth-child(4),
+.cert_list li:nth-child(5),
+.cert_list li:nth-child(6),
+    {
+    width: 7%
+}
+
+.cert_list li:last-child {
+    width: 33%
+}
+
+.pay_list li:first-child {
+    width: 40%
+}
+
+.pay_list li:nth-child(2) {
+    width: 12%
+}
+
+.pay_list li:last-child {
+    width: 48%
+}
+
+.pay_list_sum {
+    background-color: #ebf2fa;
+    font-weight: bold
+}
+
+.pay_list_sum li:first-child {
+    width: 52%
+}
+
+.pay_list_sum li:last-child {
+    width: 48%
+}
+
+.cert_box_pdf ul li:first-child {
+    width: 50%
+}
+
+.cert_box_pdf ul li {
+    float: left;
+    width: 16.6666666666666%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+}
+
+.cert_box_wallet ul li:first-child {
+    width: 50%
+}
+
+.cert_box_wallet ul li {
+    float: left;
+    width: 16.6666666666666%;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 증명서 발급 > 증명서 인쇄 */
+
+/*********************
+ 우편발송
+*********************/
+
+.letter_list {
+    border-bottom: 1px solid #686868;
+}
+
+.letter_list dt {
+    position: relative;
+    padding: 25px 35px;
+    border-top: 1px solid #686868;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.letter_list dt:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin-top: -7.5px;
+    top: 50%;
+    left: 15px;
+    width: 9px;
+    height: 15px;
+    background: url(/icerti/common/img/letter_arrow.png) center no-repeat;
+}
+
+.letter_list dd {
+    padding: 40px;
+    border-top: 1px solid #dfdfdf;
+    background: #f5f5f5;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.letter_list dd p span {
+    padding-left: 20px;
+    position: relative;
+    display: block;
+}
+
+.letter_list dd p span:before {
+    content: "※";
+    position: absolute;
+    left: 0;
+}
+
+.letter_list dd>ul>li {
+    padding-left: 10px;
+    position: relative;
+}
+
+.letter_list dd>ul>li:before {
+    position: absolute;
+    content: "*";
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width:760px) {
+    .letter_list dt {
+        padding: 15px 35px;
+        font-size: 15px;
+    }
+    .letter_list dd {
+        padding: 30px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    .letter_list dd p {}
+    .letter_list dd p span {
+        padding-left: 20px;
+    }
+}
+
+/*********************
+ 원본대조
+*********************/
+
+.original_list dt {
+    padding: 20px 0;
+    border-top: 2px solid #686868;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.original_list dd {
+    padding: 10px 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #686868;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+}
+
+@media screen and (max-width:760px) {}
+
+/* 증명서 인쇄 */
+
+.print_box {
+    height: 450px;
+    overflow-y: scroll;
+    text-align: center;
+    background: #f5f6f8;
+    border: 1px solid #e3e3e3;
+}
+
+.print_img {
+    text-align: center;
+}
+
+.print_img p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+/*********************
+ 고객센터
+*********************/
+
+/* 고객센터 > 고객지원센터 */
+
+.cscenter {
+    position: relative;
+}
+
+.cscenter .exp {
+    height: 184px;
+}
+
+.cscenter .exp_text {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.cscenter .exp_text strong {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*.cscenter .exp1 {width: 68%;}*/
+
+.cscenter .exp2 {
+    padding: 2% 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.cscenter .exp2 .tit,
+.cscenter .exp2 .fax {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cscenter .exp2 .tel {
+    margin: 15px 0 5px;
+    font-size: 35px;
+    color: #004898;
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: bold;
+}
+
+.cscenter .exp_text .time {
+    margin-top: 15px;
+}
+
+@media screen and (max-width:760px) {
+    .cscenter {
+        text-align: center;
+    }
+    .cscenter .exp {
+        height: auto;
+        position: relative;
+    }
+    .cscenter .exp2 {
+        margin-bottom: 0;
+    }
+    .cscenter span {
+        display: inline-block;
+    }
+    .cscenter .exp_text {
+        font-size: 13px;
+    }
+    .cscenter .exp_text strong,
+    .cscenter .exp2 .tit,
+    .cscenter .exp2 .fax {
+        font-size: 15px;
+    }
+}
+
+/* 고객센터 > FAQ */
+
+.faq_list {
+    width: 100%;
+    border-top: 1px solid #686868;
+}
+
+.faq_list dl {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.faq_list dt .i_qeustion,
+.faq_list dd .i_answer {
+    margin-right: 10px;
+    display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+    background: #333;
+    line-height: 26px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.faq_list dd .i_answer {
+    background: #004898;
+}
+
+.faq_list dt {
+    vertical-align: middle;
+    padding: 20px 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq_list dt .tit {
+    padding-left: 20px;
+    padding-right: 45px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.faq_list dt i {
+    position: absolute;
+    margin-top: -9.5px;
+    top: 50%;
+    right: 15px;
+    background: url(/icerti/common/img/faq_arrow_dw.png) center no-repeat;
+    display: block;
+    width: 31px;
+    height: 19px;
+}
+
+.faq_list .active dt i {
+    background-image: url(/icerti/common/img/faq_arrow.png);
+}
+
+.faq_list dd {
+    position: relative;
+    display: none;
+    padding: 30px;
+    border-top: 1px solid #dfdfdf;
+    background: #f5f5f5;
+}
+
+.faq_list dd .cont {
+    padding-left: 40px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.faq_list dd .cont .faq_btn {
+    display: block;
+    max-width: 230px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #284e75;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* 고객센터 > 원격지원 */
+
+.remote_step li {
+    padding: 20px;
+    /*	position: relative;
+	margin-top: 0px;
+	border-top: 1px solid #686868;
+	border-bottom: 1px solid #dfdfdf;*/
+}
+
+.remote_step li strong {
+    vertical-align: top;
+    display: inline-block;
+    width: 80px;
+    height: 27px;
+    line-height: 27px;
+    background: #333;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.remote_step li p {
+    margin-top: -2px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.remote_step .none:after {
+    background: none;
+}
+
+/*.remote_step li:after {
+	position: absolute;
+	content: '';
+	bottom: -40px;
+	left: 50%;
+	margin-left: -15.5px;
+	display: block;
+	width: 31px;
+	height: 19px;
+	background: url(/icerti/common/img/remote_arrow.png) center no-repeat;
+}
+*/
+
+.w-25 {
+    width: 25% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+/* 증명서 신청카운트용 */
+
+.handle-counter {
+    width: 250px;
+    padding-left: 15%;
+}
+
+/*증명서 선택 테이블*/
+
+caption {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    *line-height: 0;
+    *font-size: 0;
+    *text-indent: -9999px;
+}
+
+.tbl {
+    /*margin-top: 30px;*/
+    width: 100%;
+    text-align: center;
+}
+
+.tblWrap {
+    border-top: 2px solid #666
+}
+
+.tbl {
+    border-collapse: collapse;
+}
+
+.tbl thead th {
+    padding: 15px 0;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+    font-size: 14px;
+    background: #efefef;
+    text-align: center;
+}
+
+.tbl thead th:first-child {
+    border-left: 0;
+}
+
+.tbl thead th:last-child {
+    border-right: 0;
+}
+
+.tbl tbody th {
+    text-align: left;
+    padding: 10px 0 10px 20px;
+    border: solid #ddd;
+    border-width: 0 0 1px 1px;
+    font-size: 13px;
+}
+
+.tbl tbody td {
+    padding: 10px 0 10px;
+    border: solid #ddd;
+    border-width: 0 0 1px 1px;
+}
+
+.tbl tbody td label {
+    font-size: 12px;
+    display: none;
+}
+
+.tbl tbody th:first-child {
+    border-left: 0;
+}
+
+.tbl tbody td form,
+.tbl tbody td p.select {
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+/*.tbl tbody td [name] {text-indent: 1em;}*/
+
+.tbl tbody td .amount_bt {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.tbl tbody td .amount_bt.am_sm {
+    background-color: #274e75;
+    border: 0;
+}
+
+.tbl tbody td .amount_bt.am_ad {
+    background-color: #567ca3;
+    border: 0;
+}
+
+/*결제금액확인*/
+
+#pay_con {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #666;
+    margin-top: 40px
+}
+
+#pay_con:nth-child(1) {
+    width: 700px
+}
+
+#pay_con td:nth-child(2),
+#pay_con td:nth-child(3) {
+    width: 250px
+}
+
+#pay_con th {
+    height: 60px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+#pay_con td {
+    border: 1px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center
+}
+
+#pay_con .ko,
+#pay_con .en {
+    padding-left: 50px;
+    box-sizing: border-box;
+    text-align: left
+}
+
+#pay_con .ko:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 28px;
+    height: 100%;
+    background-image: url(/icerti/common/img/ko.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 10px
+}
+
+#pay_con .en:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 28px;
+    height: 100%;
+    background-image: url(/icerti/common/img/en.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 10px
+}
+
+#pay_con #sum {
+    background-color: #ebf2fa;
+    font-weight: bold
+}
+
+/*과정별 증명서*/
+
+.process {
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #666;
+    overflow: hidden
+}
+
+/*.process ul {float: left;margin:0;}*/
+
+.process .proce_th {
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.process li {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    list-style: square;
+    list-style-position: inside;
+    padding: 0 5px 0 5px
+}
+
+.process .proce_th {
+    list-style: none;
+    padding-left: 0
+}
+
+/*.process ul:nth-child(1) li:nth-child(14),.process ul:nth-child(2) li:nth-child(9),.process ul:nth-child(2) li:nth-child(12),.process ul:nth-child(2) li:nth-child(13),.process ul:nth-child(3) li:nth-child(3),.process ul:nth-child(3) li:nth-child(4),.process ul:nth-child(3) li:nth-child(5),.process ul:nth-child(3) li:nth-child(6),.process ul:nth-child(3) li:nth-child(7),.process ul:nth-child(3) li:nth-child(8),.process ul:nth-child(3) li:nth-child(9),.process ul:nth-child(3) li:nth-child(10),.process ul:nth-child(3) li:nth-child(11),.process ul:nth-child(3) li:nth-child(12),.process ul:nth-child(3) li:nth-child(13),.process ul:nth-child(3) li:nth-child(14){list-style: none}*/
+
+.process ul:nth-child(1) {
+    list-style: none
+}
+
+/*@@@@@@@@@증명서선택@@@@@@@@@*/
+
+/*학적 등록 정보*/
+
+.enroll {
+    overflow: hidden;
+    margin: 50px 0;
+    font-family: 'Malgun Gothic', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.enroll article {
+    float: left;
+}
+
+.enroll .profile {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.enroll .profile .photo {
+    position: relative;
+    left: 50%;
+    margin-left: -80px;
+    width: 160px;
+    height: 160px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.enroll .profile .photo img {
+    position: absolute;
+    display: block;
+    margin: 50px;
+}
+
+.enroll .profile div {
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: center;
+}
+
+.enroll .profile dt {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.enroll .profile dd {
+    display: inline-block;
+    color: #888
+}
+
+/*학적등록정보 테이블*/
+
+.major_table {
+    overflow: hidden;
+}
+
+.major_table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.major_table td {
+    width: 150px;
+}
+
+.major_table td.dept {
+    min-width: 100px;
+}
+
+.major_table td label {
+    display: block;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 1
+}
+
+.major_table td:first-child {
+    width: 40px;
+}
+
+.major_table th {
+    height: 60px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+.major_table th:first-child {
+    border-left: 1px solid #ddd
+}
+
+.major_table td {
+    border: 1px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center
+}
+
+.major_table input[type=radio] {
+    background-color: #fff;
+    border: 1px solid #bbb;
+}
+
+.major_table .rad_cs {
+    background-color: #fff;
+    border: 1px solid #bbb
+}
+
+/* 수수료안내 */
+
+.fees_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #666;
+    border-bottom: 1px solid #666;
+    margin-top: 20px;
+    border-bottom: 1px solid #666;
+}
+
+.fees_table th {
+    height: 60px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
+}
+
+.fees_table td {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    word-break: keep-all;
+}
+
+.fees_table th:first-child,
+.fees_table td:first-child {
+    border-left: 0;
+}
+
+.fees_table td p {
+    margin-left: 15px;
+}
+
+.fees_table td p strong:before,
+.fees_dl p strong:before {
+    content: "※";
+    display: inline-block;
+    text-indent: -15px;
+}
+
+.fees_list {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.fees_list li {
+    list-style: square;
+    font-size: 15px;
+    color: #333;
+    line-height: 2;
+}
+
+@media screen and (max-width:760px) {
+    .hidden-sm .s_title {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .fees_table th {
+        height: 40px;
+        font-size: 15px;
+    }
+    .fees_table td {
+        line-height: 20px;
+        font-size: 13px;
+        text-align: center;
+        padding: 30px 20px;
+        word-break: keep-all;
+    }
+    .fees_table th:first-child,
+    .fees_table td:first-child {
+        border-left: 0;
+    }
+    .fees_dl dd {
+        border-bottom: 1px solid #666;
+        border-top: 2px solid #666;
+        background: #f5f5f5;
+        padding: 20px 40px;
+        line-height: 1.8;
+    }
+    .fees_list li {
+        font-size: 13px;
+    }
+}
+
+/*********************
+ 로그인
+*********************/
+
+.login .login_box_wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.login .login_box_wrap {
+    width: 100%;
+    text-align: center
+}
+
+.login .login_box.box1 {
+    width: 82%;
+    display: inline-block;
+    text-align: left
+}
+
+/* .login .login_box.box1 {float: left; width: 60%;}*/
+
+/* .login .login_box.box2 {float: right;}*/
+
+.login .login_box dt {
+    position: relative;
+    padding: 15px 35px;
+    border-top: 1px solid #686868;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    background: #f5f5f5;
+}
+
+.login .login_box dt:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin-top: -7.5px;
+    top: 50%;
+    left: 15px;
+    width: 9px;
+    height: 15px;
+    background: url(/icerti/common/img/letter_arrow.png) center no-repeat;
+}
+
+.login .login_box dd {
+    border-top: 1px solid #dfdfdf;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    padding: 15px 15px 15px 25px;
+}
+
+.login .login_box dd ul {
+    list-style: square;
+}
+
+.login .login_box .login_input {
+    margin-top: 10px;
+}
+
+.login .login_box .login_input .row {
+    margin: 5px 0;
+    padding: 0;
+}
+
+.login .login_box .login_input .cont {
+    padding: 0;
+}
+
+.login .login_box .login_input .tit {
+    margin-top: 5px;
+    text-align: right;
+    line-height: auto;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.login .login_box dd input,
+.login .login_box dd select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+.login .login_box dd input {
+    text-indent: 0.5em;
+}
+
+.login_btn {
+    margin: 0;
+    float: right;
+}
+
+.login_btn button {
+    float: right;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #284e75;
+    color: #fff;
+}
+
+.exp.login strong {
+    font-weight: bold;
+    display: block;
+    color: #ff0000;
+}
+
+.login .login_box.box2 a {
+    margin: 10px 0;
+    display: block;
+    height: 70px;
+    background: #284e75;
+    text-align: center;
+    color: #fff;
+}
+
+.login .login_box.box2 a .login_icon {
+    float: left;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    background: #19324a url(/icerti/common/img/login_1.png) center no-repeat;
+}
+
+.login .login_box.box2 a .login_icon2 {
+    background-image: url(/icerti/common/img/login_3.png);
+}
+
+.login .login_box.box2 a .login_icon3 {
+    background-image: url(/icerti/common/img/login_2.png);
+}
+
+.login .login_box.box2 a .login_txt {
+    float: left;
+    width: 75%;
+    line-height: 70px;
+}
+
+.exp.login {
+    margin-top: 5px;
+}
+
+@media screen and (min-width:760px) and (max-width:1200px) {
+    .login .login_box.box1,
+    .login .login_box.box2 {
+        float: inherit;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .login .login_box.box1,
+    .login .login_box.box2 {
+        float: inherit;
+        width: 100%;
+    }
+    .login .login_box dt {
+        font-size: 15px;
+    }
+    .login .login_box dd {
+        padding: 0;
+        font-size: 13px;
+    }
+    .login .login_box dd ul {
+        margin-left: 20px;
+    }
+    .login .exp {
+        margin-bottom: 0;
+    }
+    .login .login_btn li {
+        margin: 0;
+        margin-top: 5px;
+        display: block;
+    }
+    .login .login_btn a {
+        display: block;
+        width: 75%;
+        font-size: 12px;
+        padding: 15px 30px;
+        margin: 0 auto;
+    }
+}
+
+/*********************
+ 미디어쿼리
+*********************/
+
+@media screen and (max-width:960px) {
+    .info_step li .img:after {
+        background-size: 50%
+    }
+    .info_step li p {
+        font-size: 12px;
+        word-break: keep-all;
+        margin-bottom: -30px;
+    }
+    .info_step li p strong {
+        font-size: 15px;
+    }
+    .faq_list dt .tit {
+        padding-left: 20px;
+        padding-right: 45px;
+        font-size: 15px;
+    }
+    .faq_list dt i {
+        background-size: 80%;
+    }
+    .faq_list dd .cont {
+        font-size: 13px;
+    }
+    .faq_list dd .cont .faq_btn {
+        font-size: 13px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .remote_step li p {
+        margin-top: 8px;
+        margin-left: 0;
+        display: block;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* 이용약관 */
+
+.agree {
+    padding: 20px;
+    width: 100%;
+    height: 350px;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    background: #f5f6f8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/*** max-width:1200px ***/
+
+@media screen and (min-width:961px) and (max-width:1200px) {
+    /*** 이용안내 ***/
+    /*이용안내 탭*/
+    .tab_container {}
+    ul.tabs.dir {
+        width: 100%
+    }
+    /*학적 등록 정보*/
+    .enroll .profile {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .major_table table {
+        width: 100%
+    }
+    /* 발급절차 */
+    .info_step {
+        font-size: 0;
+    }
+    .info_step li {
+        font-size: 0;
+        text-align: center;
+        vertical-align: top;
+    }
+    .info_step li .img {
+        position: relative;
+        display: block
+    }
+    .info_step li .img:after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        margin-top: -18px;
+        width: 20px;
+        height: 36px;
+        display: block;
+        background: url(/icerti/common/img/step_arrow.png) no-repeat center;
+    }
+    .info_step li.step4 .img:after {
+        display: none;
+    }
+    .info_step li p {
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #333;
+    }
+    .info_step li p strong {
+        margin-bottom: 15px;
+        /*	display: block; */
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+/*** min-width:761px ~ max-width:960px ***/
+
+@media screen and (min-width:761px) and (max-width:960px) {
+    /* @@@ 우편발송 @@@*/
+    #main_post {
+        width: 100%
+    }
+    /*이용안내 탭*/
+    ul.tabs.dir {
+        width: 100%
+    }
+    /*학적 등록 정보*/
+    .enroll .profile {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .major_table table {
+        width: 100%
+    }
+    .info_step li .img img {
+        width: 50%;
+    }
+    .info_step li .img:after {
+        content: "";
+        position: absolute;
+        right: 22px;
+        top: 25%;
+        width: 18px;
+        height: 20px;
+        display: block;
+        background: url(/icerti/common/img/step_arrow.png) no-repeat center;
+    }
+    .info_step li.step4 .img:after {
+        display: none;
+    }
+}
+
+/*** min-width:481px ~ max-width:760px **@@@@*/
+
+@media screen and (min-width:481px) and (max-width:800px) {
+    /*@@@ 발급가능한 증명서 @@@*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 50px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-width: 0 0 1px 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .tbl tbody td {
+        border-width: 0 0 1px 0;
+        width: 100%;
+        display: block;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .tbl tbody td input {
+        width: 30%
+    }
+    /*증명서 선택 exp*/
+    .exp.choice {
+        height: 200px;
+        margin: 40px 0;
+    }
+    /* .exp.choice .exp_icon {display: none}
+	.exp.choice .exp_text {padding: 0;width:90%;margin-left: 5%}
+	.exp.choice .exp_text.ce ul{padding:0;margin: 25px 0;font-size: 12px;}
+	.exp.choice .exp_text.ce ul li {list-style:square;margin: 15px 20px ;} */
+    .exp_text.ce {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+    .exp_text.ce a {
+        width: 170px;
+        right: 50%;
+        margin-right: -85px;
+        bottom: 0px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .exp.en .exp_icon {
+        display: none;
+    }
+    .exp.en .exp_text {
+        width: 85%;
+    }
+    .exp.en .exp_text ul li {
+        font-size: 12px
+    }
+    .exp.en {
+        height: auto
+    }
+    /*@@@ 발급가능한 증명서 @@@*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 50px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-width: 0 0 1px 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .tbl tbody td {
+        border-width: 0 0 1px 0;
+        width: 100%;
+        display: block;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .tbl tbody td input {
+        width: 30%
+    }
+    /*발급가능한 증명서*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 0px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+    .tbl tbody td {
+        border-width: 0;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding: 15px 0 0 10px;
+        text-align: left;
+        float: left;
+        width: 50px
+    }
+    .tbl tbody td input {
+        width: 67%
+    }
+    .tbl tbody td form {
+        width: 70%
+    }
+    /*증명서 선택 exp*/
+    .exp.choice {
+        height: auto;
+        margin: 40px 0;
+    }
+    .exp.choice .exp_icon {
+        display: none
+    }
+    .exp.choice .exp_text.ce {
+        padding: 0;
+        width: 90%;
+        height: auto;
+        margin: 10px 5%;
+        margin-bottom: 50px;
+    }
+    .exp.choice .exp_text.ce ul {
+        padding: 0;
+        margin-bottom: 40px;
+        font-size: 12px;
+        overflow: hidden
+    }
+    .exp.choice .exp_text ul li {
+        list-style: square;
+        margin: 15px 20px;
+    }
+    .exp_text.ce {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+    .exp_text.ce a {
+        width: 170px;
+        right: 50%;
+        margin-right: -85px;
+        bottom: 0px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .choice_button {
+        width: 80%;
+        margin: 40px auto;
+        font-size: 13px;
+    }
+    .choice_button #c_prev,
+    .choice_button #c_next {
+        width: 23%;
+    }
+    .choice_button #reset {
+        width: 47%;
+        margin-right: 1%;
+        margin-left: 1%
+    }
+    /*@@@@@@결제금액확인@@@@@*/
+    .exp.choice .exp_text ul li {
+        font-size: 12px;
+        line-height: 1.5
+    }
+    #pay_con td {
+        border: 0;
+        font-size: 13px
+    }
+    #pay_con th {
+        border-right: 0;
+        font-size: 15px
+    }
+    #pay_con:nth-child(1) {
+        width: 33.333333%;
+    }
+    #pay_con td:nth-child(2),
+    #pay_con td:nth-child(3) {
+        width: 33.333333%
+    }
+    #pay_con .ko,
+    #pay_con .en {
+        padding-left: 10px;
+        box-sizing: border-box;
+        text-align: left
+    }
+    /*@@@@@@@@@@@이용안내@@@@@@@@@*/
+    /*이용안내 탭*/
+    ul.tabs.dir {
+        width: 100%;
+    }
+    ul.tabs.dir li {
+        margin: 0;
+        border: 1px solid #333;
+    }
+    /*증명서 선택 exp*/
+    .exp.cer {
+        height: auto;
+        margin: 40px 0;
+    }
+    .exp.cer .exp_icon {
+        display: none
+    }
+    .exp.cer .exp_text.ce {
+        padding: 0;
+        width: 90%;
+        height: auto;
+        margin: 10px 5%;
+        margin-bottom: 50px;
+    }
+    .exp.cer.exp_text ul {
+        padding: 0;
+        margin-bottom: 40px;
+        font-size: 12px;
+        overflow: hidden
+    }
+    .exp.choice .exp_text ul li {
+        list-style: square;
+        margin: 15px 20px;
+    }
+    /*증명서 보관함*/
+    .cert_box {
+        border-top: 2px solid #666;
+        border-bottom: 1px solid #666
+    }
+    .cert_box .cert_bxTop {
+        background-color: #f5f5f5;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .cert_box .cert_bxTop ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+    .cert_box ul {
+        overflow: hidden;
+        text-align: center;
+    }
+    .cert_box ul li {
+        float: left;
+        width: 16.66666%;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+        height: 50px;
+        line-height: 50px;
+    }
+    .cert_box ul li:first-child {
+        width: 33.3333333%
+    }
+    .cert_box ul li.ko,
+    .cert_box ul li.en {
+        position: relative;
+    }
+    .cert_box ul li.ko:before {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+        content: '';
+        display: block;
+        float: left;
+        background-image: url(/icerti/common/img/ko.png);
+        width: 27px;
+        height: 27px;
+        ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cert_box ul li.en:before {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+        content: '';
+        display: block;
+        float: left;
+        background-image: url(/icerti/common/img/en.png);
+        width: 27px;
+        height: 27px;
+        ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cert_box ul li.print,
+    .cert_box ul li.printed {
+        position: relative
+    }
+    .cert_box ul li.print:before {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        top: 8px;
+        content: 'Print';
+        display: block;
+        width: 120px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: bold;
+        border: 1px solid #333;
+    }
+    .cert_box ul li.printed:before {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        top: 8px;
+        content: 'Printed';
+        display: block;
+        width: 120px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: bold;
+        border: 1px solid #ddd;
+        background-color: #f5f5f5;
+        color: #bbbbbb
+    }
+    .cert_box p {
+        padding: 15px 0;
+        text-align: center;
+    }
+    /*과정별 증명서*/
+    .process {}
+    .process ul {
+        width: 100%;
+        border-bottom: 1px solid #ddd
+    }
+    .process ul .proce_th {
+        float: none;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        font-size: 1.2em
+    }
+    .process ul>li {
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 5px 0 0 5px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.98em;
+        line-height: normal
+    }
+    .process ul:nth-child(1) li:nth-child(14) {
+        display: none
+    }
+    .process ul:nth-child(2) li:nth-child(9),
+    .process ul:nth-child(2) li:nth-child(12),
+    .process ul:nth-child(2) li:nth-child(13) {
+        display: none
+    }
+    /*학적 등록 정보*/
+    .enroll .profile {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .major_table table {
+        width: 100%
+    }
+    .major_table table th {
+        border-right: 0;
+        font-size: 15px
+    }
+    .major_table table td {
+        border-right: 0;
+        border-left: 0;
+        font-size: 13px
+    }
+    /*.major button*/
+    .major_button {
+        overflow: hidden;
+        width: 146px;
+        margin: 30px auto
+    }
+    .major_button button {
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        border: 2px solid #333;
+        font-size: 13px;
+        text-align: center;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .major_button button:hover {
+        background-color: #333;
+        color: #fff
+    }
+    /*증명서 보관함*/
+    .cert_box .cert_bxTop {
+        display: none
+    }
+    .cert_box ul li {
+        width: 100% !important;
+        float: none;
+        border: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .cert_box ul li.print,
+    .cert_box ul li.printed {
+        text-align: center
+    }
+    .cert_box ul li.ko,
+    .cert_box ul li.en {
+        width: 100%;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 15px
+    }
+    .cert_box ul li.ko:before,
+    .cert_box ul li.en:before {
+        left: 5px
+    }
+    .cert_box ul li {
+        font-size: 13px
+    }
+    .cert_box ul li.date:before {
+        content: '· 신청일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.apply:before {
+        content: '· 신청부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prt:before {
+        content: '· 출력부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prtdate:before {
+        content: '· 출력일시';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.email:before {
+        content: '· Email부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.fax:before {
+        content: '· Fax부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxsenddate:before {
+        content: '· Fax발송일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxphone:before {
+        content: '· Fax수신번호';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxmsg:before {
+        content: '· Fax전송상태';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.down:before {
+        content: '· 다운일자';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.money:before {
+        content: '· 금액';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.sum:before {
+        content: '· 합계';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.addr:before {
+        content: '· 수신처 메일주소';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailsenddate:before {
+        content: '· 메일 발송일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailrecvdate:before {
+        content: '· 메일 수신일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailprintdate:before {
+        content: '· 수신처 출력일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailmsg:before {
+        content: '· 발송상태';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.date_en:before {
+        content: '· Application date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.apply_en:before {
+        content: '· NO. of applications';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prt_en:before {
+        content: '· No. of Print';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prtdate_en:before {
+        content: '· Date of Print';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.email_en:before {
+        content: '· No. of Email';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.fax_en:before {
+        content: '· No. of Fax';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxsenddate_en:before {
+        content: '· Fax Send Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxphone_en:before {
+        content: '· Fax receiving Num.';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxmsg_en:before {
+        content: '· Fax transmission status';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.down_en:before {
+        content: '· Date of Download';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.money_en:before {
+        content: '· Fee';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.sum_en:before {
+        content: '· Sum';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.addr_en:before {
+        content: '· Dest-email';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailsenddate_en:before {
+        content: '· Mail Sending Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailrecvdate_en:before {
+        content: '· Mail Recevied Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailprintdate_en:before {
+        content: '· Dest-Output Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailmsg_en:before {
+        content: '· Sending Status';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul {
+        position: relative;
+        overflow: hidden;
+        width: 100%
+    }
+    .cert_box ul li.printed:before,
+    .cert_box ul li.print:before {
+        position: absolute;
+        left: 60%;
+        margin-left: 0;
+        top: -40px;
+    }
+    .cert_box ul li.printed,
+    .cert_box ul li.print {
+        height: 10px
+    }
+    .cert_box p {
+        padding: 15px 0;
+        text-align: center;
+    }
+    .cert_list li:first-child {
+        width: 100%
+    }
+    .cert_list li:nth-child(2) {
+        width: 100%
+    }
+    .cert_list li:nth-child(3),
+    .cert_list li:nth-child(4) {
+        width: 100%
+    }
+    .cert_list li:last-child {
+        width: 100%
+    }
+    .pay_list li:first-child. {
+        width: 100%
+    }
+    .pay_list li:nth-child(2) {
+        width: 100%
+    }
+    .pay_list li:last-child {
+        width: 100%
+    }
+    .pay_list_sum li:first-child,
+    .pay_list_sum li:last-child {
+        width: 50%
+    }
+}
+
+/*** max-width:480px **@@@@*/
+
+@media screen and (max-width:480px) {
+    /*@@@ 발급가능한 증명서 @@@*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 50px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-width: 0 0 1px 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .tbl tbody td {
+        border-width: 0 0 1px 0;
+        width: 100%;
+        display: block;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .tbl tbody td input {
+        width: 30%
+    }
+    /*증명서 선택 exp*/
+    .exp.choice {
+        height: 200px;
+        margin: 40px 0;
+    }
+    .exp.choice .exp_icon {
+        display: none
+    }
+    .exp.choice .exp_text {
+        padding: 0;
+        width: 90%;
+        margin-left: 5%
+    }
+    .exp.choice .exp_text.ce ul {
+        padding: 0;
+        margin: 25px 0;
+        font-size: 12px;
+    }
+    .exp.choice .exp_text.ce ul li {
+        list-style: square;
+        margin: 15px 20px;
+    }
+    .exp_text.ce {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+    .exp_text.ce a {
+        width: 170px;
+        right: 50%;
+        margin-right: -85px;
+        bottom: 0px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .exp.en .exp_icon {
+        display: none;
+    }
+    .exp.en .exp_text {
+        width: 85%;
+    }
+    .exp.en .exp_text ul li {
+        font-size: 12px
+    }
+    .exp.en {
+        height: auto
+    }
+    /*@@@ 발급가능한 증명서 @@@*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 50px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-width: 0 0 1px 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .tbl tbody td {
+        border-width: 0 0 1px 0;
+        width: 100%;
+        display: block;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding-right: 15px;
+    }
+    .tbl tbody td input {
+        width: 30%
+    }
+    /*발급가능한 증명서*/
+    .tbl thead {
+        display: none;
+    }
+    .tbl tbody tr {
+        position: relative;
+        display: block;
+        padding-top: 0px;
+    }
+    .tbl tbody th {
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 0;
+        font-size: 14px;
+        background: #efefef;
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+    .tbl tbody td {
+        border-width: 0;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    .tbl tbody td label {
+        display: inline-block;
+        padding: 15px 0 0 10px;
+        text-align: left;
+        float: left;
+        width: 50px
+    }
+    .tbl tbody td input {
+        width: 67%
+    }
+    .tbl tbody td form {
+        width: 70%
+    }
+    /*증명서 선택 exp*/
+    .exp.choice {
+        height: auto;
+        margin: 40px 0;
+    }
+    .exp.choice .exp_icon {
+        display: none
+    }
+    .exp.choice .exp_text.ce {
+        padding: 0;
+        width: 90%;
+        height: auto;
+        margin: 10px 5%;
+        margin-bottom: 50px;
+    }
+    .exp.choice .exp_text.ce ul {
+        padding: 0;
+        margin-bottom: 40px;
+        font-size: 12px;
+        overflow: hidden
+    }
+    .exp.choice .exp_text ul li {
+        list-style: square;
+        margin: 15px 20px;
+    }
+    .exp_text.ce {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+    .exp_text.ce a {
+        width: 170px;
+        right: 50%;
+        margin-right: -85px;
+        bottom: 0px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .choice_button {
+        width: 80%;
+        margin: 40px auto;
+        font-size: 13px;
+    }
+    .choice_button #c_prev,
+    .choice_button #c_next {
+        width: 23%;
+    }
+    .choice_button #reset {
+        width: 47%;
+        margin-right: 1%;
+        margin-left: 1%
+    }
+    /*@@@@@@결제금액확인@@@@@*/
+    .exp.choice .exp_text ul li {
+        font-size: 12px;
+        line-height: 1.5
+    }
+    #pay_con td {
+        border: 0;
+        font-size: 13px
+    }
+    #pay_con th {
+        border-right: 0;
+        font-size: 15px
+    }
+    #pay_con:nth-child(1) {
+        width: 33.333333%;
+    }
+    #pay_con td:nth-child(2),
+    #pay_con td:nth-child(3) {
+        width: 33.333333%
+    }
+    #pay_con .ko,
+    #pay_con .en {
+        padding-left: 10px;
+        box-sizing: border-box;
+        text-align: left
+    }
+    /*@@@@@@@@@@@이용안내@@@@@@@@@*/
+    /*이용안내 탭*/
+    .tab_container {}
+    ul.tabs.dir {
+        width: 100%;
+        border: 1px solid #333
+    }
+    ul.tabs.dir li {
+        margin: 0
+    }
+    /*@@@증명서 보관함*/
+    .exp .exp_text.cer {
+        width: 100%
+    }
+    /*증명서 선택 exp*/
+    .exp.cer {
+        height: auto;
+        margin: 40px 0;
+    }
+    .exp.cer .exp_icon {
+        display: none
+    }
+    .exp.cer .exp_text.ce {
+        padding: 0;
+        width: 90%;
+        height: auto;
+        margin: 10px 5%;
+        margin-bottom: 50px;
+    }
+    .exp.cer.exp_text ul {
+        padding: 0;
+        margin-bottom: 40px;
+        font-size: 12px;
+        overflow: hidden
+    }
+    .exp .exp_text.cer {
+        width: 100%;
+        font-size: 12px;
+        padding: 20px 20px 20px 0;
+    }
+    .exp .exp_text ul li {
+        font-size: 12px;
+    }
+    .exp.choice .exp_text ul li {
+        list-style: square;
+        margin: 15px 20px;
+    }
+    /*증명서 보관함*/
+    .cert_box {
+        border-top: 2px solid #666;
+        border-bottom: 1px solid #666
+    }
+    .cert_box .cert_bxTop {
+        background-color: #f5f5f5;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .cert_box .cert_bxTop ul li {
+        height: 60px;
+        line-height: 60px;
+    }
+    .cert_box ul {
+        overflow: hidden;
+        text-align: center;
+    }
+    .cert_box ul li {
+        float: left;
+        width: 16.66666%;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+        height: 50px;
+        line-height: 50px;
+    }
+    .cert_box ul li:first-child {
+        width: 33.3333333%
+    }
+    .cert_box ul li.ko,
+    .cert_box ul li.en {
+        position: relative;
+    }
+    .cert_box ul li.ko:before {
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        content: '';
+        display: block;
+        float: left;
+        background-image: url(/icerti/common/img/ko.png);
+        width: 27px;
+        height: 27px;
+        ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cert_box ul li.en:before {
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        content: '';
+        display: block;
+        float: left;
+        background-image: url(/icerti/common/img/en.png);
+        width: 27px;
+        height: 27px;
+        ;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .cert_box ul li.print,
+    .cert_box ul li.printed {
+        position: relative
+    }
+    .cert_box ul li.print:before {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        top: 8px;
+        content: 'Print';
+        display: block;
+        width: 120px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: bold;
+        border: 1px solid #333;
+    }
+    .cert_box ul li.printed:before {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+        top: 8px;
+        content: 'Printed';
+        display: block;
+        width: 120px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: bold;
+        border: 1px solid #ddd;
+        background-color: #f5f5f5;
+        color: #bbbbbb
+    }
+    .cert_box p {
+        padding: 15px 0;
+        text-align: center;
+    }
+    /*과정별 증명서*/
+    .process {}
+    .process ul {
+        width: 100%;
+        border-bottom: 1px solid #ddd
+    }
+    .process ul .proce_th {
+        float: none;
+        width: 100%;
+        font-size: 1.2em
+    }
+    /*	 .process ul > li {float: left;width: 50%;margin: 0;padding: 0;box-sizing: border-box;border: 0} */
+    .process ul>li {
+        margin: 0;
+        padding: 10px 0 0 10px;
+        box-sizing: border-box;
+        line-height: normal;
+        font-size: 1.0em
+    }
+    .process ul:nth-child(1) li:nth-child(14) {
+        display: none
+    }
+    .process ul:nth-child(2) li:nth-child(9),
+    .process ul:nth-child(2) li:nth-child(12),
+    .process ul:nth-child(2) li:nth-child(13) {
+        display: none
+    }
+    .process li:last-child {
+        margin-bottom: 5px
+    }
+    /*학적 등록 정보*/
+    .enroll .profile {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .major_table table {
+        width: 100%
+    }
+    .major_table table th {
+        border-right: 0;
+        font-size: 15px
+    }
+    .major_table table td {
+        border-right: 0;
+        border-left: 0;
+        font-size: 13px
+    }
+    /*.major button*/
+    .major_button {
+        overflow: hidden;
+        width: 146px;
+        margin: 30px auto
+    }
+    .major_button button {
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        border: 2px solid #333;
+        font-size: 13px;
+        text-align: center;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .major_button button:hover {
+        background-color: #333;
+        color: #fff
+    }
+    /*증명서 보관함*/
+    .cert_box .cert_bxTop {
+        display: none
+    }
+    .cert_box ul li {
+        width: 100% !important;
+        float: none;
+        border: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .cert_box ul li.print,
+    .cert_box ul li.printed {
+        text-align: center
+    }
+    .cert_box ul li.ko,
+    .cert_box ul li.en {
+        width: 100%;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 15px;
+        height: auto;
+        line-height: 30px
+    }
+    .cert_box ul li.ko:before,
+    .cert_box ul li.en:before {
+        left: 5px
+    }
+    .cert_box ul li {
+        font-size: 13px
+    }
+    .cert_box ul li.date:before {
+        content: '· 신청일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.apply:before {
+        content: '· 신청부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prt:before {
+        content: '· 출력부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.email:before {
+        content: '· Email부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.fax:before {
+        content: '· Fax부수';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.down:before {
+        content: '· 다운일자';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.money:before {
+        content: '· 금액';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.sum:before {
+        content: '· 합계';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxsenddate:before {
+        content: '· FAX발송일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxphone:before {
+        content: '· 수신처팩스번호';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxmsg:before {
+        content: '· 발송상태';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.addr:before {
+        content: '· 수신처메일주소';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailsenddate:before {
+        content: '· 메일발송일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailprintdate:before {
+        content: '· 수신처출력일';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailmsg:before {
+        content: '· 발송상태';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.date_en:before {
+        content: '· Application date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.apply_en:before {
+        content: '· NO. of applications';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.prt_en:before {
+        content: '· No. of Print';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.email_en:before {
+        content: '· No. of Email';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.fax_en:before {
+        content: '· No. of Fax';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.down_en:before {
+        content: '· Date of Download';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.money_en:before {
+        content: '· Fee';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.sum_en:before {
+        content: '· Sum';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxsenddate_en:before {
+        content: '· FAX sending date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxphone_en:before {
+        content: '· Dest fax number';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.faxmsg_en:before {
+        content: '· Sending Status';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.addr_en:before {
+        content: '· Dest-email';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailsenddate_en:before {
+        content: '· Mail Sending Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailprintdate_en:before {
+        content: '· Dest-Output Date';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul li.emailmsg_en:before {
+        content: '· Sending Status';
+        float: left;
+        list-style: square;
+        list-style-position: inside;
+        margin-right: 5%;
+        font-weight: bold;
+        width: 170px;
+        text-align: left
+    }
+    .cert_box ul {
+        position: relative;
+        overflow: hidden;
+        width: 100%
+    }
+    .cert_box ul li.printed:before,
+    .cert_box ul li.print:before {
+        position: absolute;
+        left: 60%;
+        margin-left: 0;
+        top: -40px;
+    }
+    .cert_box ul li.printed,
+    .cert_box ul li.print {
+        height: 10px
+    }
+    .cert_box p {
+        padding: 15px 0;
+        text-align: center;
+    }
+    .pay_list li:first-child. {
+        width: 100%
+    }
+    .pay_list li:nth-child(2) {
+        width: 100%
+    }
+    .pay_list li:last-child {
+        width: 100%
+    }
+    .pay_list_sum li:first-child,
+    .pay_list_sum li:last-child {
+        width: 50%
+    }
+}
+
+/* 레이어팝업 */
+
+.ly_cont .modal-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 0;
+    padding-bottom: 0;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+.ly_cont .text_area {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    height: 100%;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.ly_cont .text_area2 {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.ly_cont .text_area2 dt {
+    background: #f5f5f5;
+    border-top: 2px solid #333;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.ly_cont .text_area2 dd {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    vertical-align: top;
+}
+
+.ly_cont .text_area2 dd input+label {
+    margin-right: 30px;
+}
+
+/* Tablet & Desktop Device */
+
+@media all and (max-width:760px) {
+    /*	.info_step li .img:after {background: none;} */
+    .info_step li .img img {
+        width: auto;
+    }
+    .info_step li .img:after {
+        content: "";
+        position: absolute;
+        left: 250px;
+        top: 36%;
+        width: 18px;
+        height: 20px;
+        display: block;
+        background: url(/icerti/common/img/step_arrow.png) no-repeat center;
+    }
+    .info_step li.step4 .img:after {
+        display: none;
+    }
+    .info_step li p {
+        margin-bottom: 30px
+    }
+}
+
+/*no_search_result*/
+
+.no_search_result {
+    display: none;
+}
+
+.cert_area {
+    text-align: center;
+}
+
+.no_search_result .wrap,
+.cert_area .wrap {
+    margin: 50px auto 0;
+    width: 120px;
+    height: 100px;
+    position: relative;
+}
+
+div.items {
+    font-size: 50px;
+}
+
+div.items .fa {
+    position: absolute;
+    top: calc(50% - 0.4em);
+    left: calc(50% - 0.4em);
+    opacity: 0;
+}
+
+div.items .fa:nth-child(1) {
+    animation: slidefade 10s 0s infinite linear;
+}
+
+div.items .fa:nth-child(2) {
+    animation: slidefade 10s 2s infinite linear;
+}
+
+div.items .fa:nth-child(3) {
+    animation: slidefade 10s 4s infinite linear;
+}
+
+div.items .fa:nth-child(4) {
+    animation: slidefade 10s 6s infinite linear;
+}
+
+div.items .fa:nth-child(5) {
+    animation: slidefade 10s 8s infinite linear;
+}
+
+/*
+i.fa-search {
+	color: #a9afb9;
+	position: absolute;
+	z-index: 2;
+}
+*/
+
+i.search-1 {
+    font-size: 20px;
+    top: 5px;
+    left: 0;
+    top: -10px;
+    left: -15px;
+    animation: rotcw 5s infinite linear;
+}
+
+i.search-2 {
+    font-size: 12px;
+    top: 10px;
+    right: 15px;
+    top: -5px;
+    right: 0;
+    animation: rotcw 4s infinite linear;
+}
+
+i.search-3 {
+    font-size: 12px;
+    bottom: 0;
+    left: 5px;
+    bottom: -15px;
+    left: -10px;
+    animation: rotccw 4.4s infinite linear;
+}
+
+i.search-4 {
+    font-size: 20px;
+    bottom: -5px;
+    right: 0;
+    bottom: -20px;
+    right: -15px;
+    animation: rotccw 5.5s infinite linear;
+}
+
+/**
+ * Animations
+ */
+
+@keyframes slidefade {
+    0% {
+        opacity: 0;
+        transform: translate(50px, 0);
+    }
+    4.5% {
+        opacity: 1;
+        transform: translate(10px, 0);
+    }
+    10.5% {
+        opacity: 1;
+        transform: translate(-10px, 0);
+    }
+    15% {
+        opacity: 0;
+        transform: translate(-50px, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(50px, 0);
+    }
+}
+
+@keyframes rotcw {
+    from {
+        transform: rotate(0deg) translate(5px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(5px) rotate(-360deg);
+    }
+}
+
+@keyframes rotccw {
+    from {
+        transform: rotate(0deg) translate(5px) rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg) translate(5px) rotate(360deg);
+    }
+}
+
+.view_toolbar {
+    padding: 8px;
+    background-color: #2196F3;
+    text-align: center;
+    border: 1px solid #666;
+    padding-left: 20px;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.no-margin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-space {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.shadow_2_black {
+    text-shadow: -2px 0 8px black, 0 2px 8px black, 2px 0 8px black, 0 -2px 8px black;
+}
+
+.shadow_2_white {
+    text-shadow: 2px 4px 2px white;
+}
+
+.shadow_2_gray {
+    text-shadow: 2px 4px 4px gray;
+}
+
+.shadow_gray_color_black {
+    text-shadow: 4px 4px 6px grey;
+    color: black;
+}
+
+#sayMsgBtn {
+    font-size: 30px;
+    font-weight: 800;
+    background: transparent;
+    bottom: 100px;
+    display: inline-block;
+    position: fixed;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    z-Index: 9999;
+    box-shadow: 0 0 14px -3px white;
+}
+
+#cacaoBtn {
+    background-image: url("/icerti/common/img/kakao/kakao-talk.png");
+    background: transparent;
+    bottom: 55px;
+    display: inline-block;
+    position: fixed;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    z-Index: 9999;
+    box-shadow: 0 0 14px -3px white;
+}
+
+#cacaoBtn a {
+    font-weight: 800;
+    font-size: 13px;
+    color: yellow !important;
+}
+
+#topBtn {
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 5px;
+    z-Index: 9999;
+    box-shadow: 0 0 14px -3px white;
+}
+
+.zoom:hover {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.zoom {
+    font-size: 22px;
+    color: black !important;
+    text-decoration: none;
+    padding: 0;
+    margin: 2px 0 4px 0;
+    height: 25px;
+    cursor: pointer;
+    line-height: 0;
+}
+
+#div-LoginInfo {
+    background-color: #f7f7f7;
+    color: black;
+    padding: 10px;
+    z-index: 9999;
+    position: absolute;
+    border: 1px solid #9191c1;
+    box-shadow: 5px 5px 8px 2px #5b5b69;
+    border-radius: 10px;
+}
+
+.login-title {
+    background-color: darkgray;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    margin: -10px -10px 10px -10px;
+    ;
+    color: white;
+    text-align: center;
+}
+
+#div-LoginInfo .head {
+    font-weight: 800;
+}
+
+#div-LoginInfo .last-date,
+#div-LoginInfo .last-ip {
+    padding-left: 20px;
+}
+
+#div-LoginInfo .closebtn {
+    background-color: #284e75;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid darkgray;
+    z-index: 9999;
+    position: absolute;
+}

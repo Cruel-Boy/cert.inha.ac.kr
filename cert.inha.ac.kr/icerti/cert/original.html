@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Expires" content="-1"/> 
+<meta http-equiv="Pragma" content="no-cache"/> 
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<link rel="shortcut icon" href="/icerti/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/icerti/favicon.ico" type="image/x-icon" />
+
+<title>인하대학교 증명발급시스템[ICerti]</title>
+<style type="text/css">
+@-ms-viewport {width:device-width; zoom:1}
+@-o-viewport{width:device-width; zoom:1}
+@viewport{width:device-width; zoom:1}
+</style>
+<link rel="stylesheet" href="/icerti/css/new/normalize.css" />
+<link rel="stylesheet" href="/icerti/css/new/bootstrap.css" />
+<link rel="stylesheet" href="/icerti/css/new/common.css">
+<link rel="stylesheet" href="/icerti/css/new/layout.css?1">
+<link rel="stylesheet" href="/icerti/css/new/jquery.bxslider.css" />
+<link rel="stylesheet" href="/icerti/css/new/font-awesome.min.css" />
+<link rel="stylesheet" href="/icerti/css/nanum-gothic/webfont.css" />
+<script src="/icerti/js/new/jquery-1.12.4.min.js"></script>
+<script src="/icerti/js/new/jquery-ui.min.js"></script>
+<script src="/icerti/js/new/jquery.bxslider.js"></script>
+<script src="/icerti/js/new/bootstrap.min.js"></script>
+<script src="/icerti/js/jquery/jquery.cookie.js"></script>
+<script src="/icerti/js/new/menuscript.js?20210909"></script>
+<script src="/icerti/js/common/inapp.js?5"></script>
+<script src="/icerti/js/common/voice.js"></script>
+<script>
+var deviceType="PC";
+var agent = navigator.userAgent;
+/* if(agent.indexOf("KAKAOTALK")>=0){
+	alert("카카오톡으로 링크를 열면 비정상적으로 동작합니다.\n크롬이나 사파리를 사용하시기 바랍니다.");
+	window.close();
+}else if(agent.indexOf("NAVER")>=0 || agent.indexOf("DaumApps")>=0){
+	alert("네이버나 다음앱에서 링크를 열면 비정상적으로 동작합니다.\n크롬이나 사파리를 사용하시기 바랍니다.");
+	window.close();
+} */
+if(location.href.indexOf("choiceType")<0 && window.name == "hrdPopup"){
+	location.replace("/icerti/jsp/login/hrd/error/wrongPage.jsp");
+}
+var delay = 100;
+$(document).ready(function () {
+	$('#topBtn, #topDiv').click(function(e) {
+		$('html, body').stop().animate({scrollTop: 0}, delay);
+	});
+	$(window).scroll(function () {
+	    if ($(this).scrollTop() > 100) {
+	    	$('#topBtn').fadeIn(500);
+	    } else {
+	    	$('#topBtn').fadeOut('slow');
+	    }
+	});
+
+});
+function notifyLogin(){
+	sayAlert("아래 학적을 우선 선택하세요");
+	$("#next_btn").focus();
+}
+</script>
+</head>
+<body>
+
+<div id="topDiv">
+	<span id="sayMsgBtn"><a href="javascript:;" onClick="sayMsgOnOff()" title="음성안내 기능을 켜거나 끌 수 있습니다."><i id="sayMsgOnOffIcon" class="fas fa-volume-up"></i></a></span>
+	<span id="cacaoBtn"><a href="https://pf.kakao.com/_pIdhu" target="kakao" title="아이콘을 클릭하시면 카카오톡 1:1상담으로 연결됩니다.&#13;&#10;(평일 09시~18시 / 점심12~13시)"><img src="/icerti/common/img/kakao/kakao-talk.png" width="100%" border="0"></a></span>
+	<span id="topBtn">top</span>
+</div>
+<div style="display:none">
+<iframe id="checkSession" width="0" height="0" src="/icerti/check.jsp"></iframe>
+</div>
+<div id="wrap">
+	<header id="header">
+    <div class="top-menu-content">
+        <div class="container">
+            <div><a href="/icerti/index.jsp" class="center-name">인터넷 증명서 발급센터</a></div>
+            <div id="nowTimes"></div>
+            <ul class="top-menu-utill">
+                <li><a href="https://pf.kakao.com/_pIdhu" target="kakao" title="아이콘을 클릭하시면 카카오톡 1:1상담으로 연결됩니다.&#13;&#10;(평일 09시~18시 / 점심12~13시)" style="background-color:yellow;font-weight:800;font-size:13px;padding:3px 5px;"><img src="/icerti/common/img/kakao/kakao-talk.png" border="0" style="width:30px;margin-left:-11px;"> 상담</a></li>
+                <li><a href="/icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
+
+                	<li><a href="/icerti/auth/login.lgn?cmd=loginForm">로그인</a></li>
+
+                <li>
+                    <select name="lang" id="lang" class="language">
+                        <option value="" selected>KOREAN</option>
+                    	<option value="en" >ENGLISH</option>
+                    </select>
+                </li>
+
+                <li>
+			<div class="btn-group btn-group-sm" role="group" aria-label="Extra-small button group"> 
+				<button class="btn btn-default" type="button" onclick="zoomOut()" title="화면축소"><i class="fas fa-search-minus"></i></button> 
+				<button class="btn btn-default" type="button" onclick="initZoom()" title="화면초기화"><i class="fas fa-search"></i></button> 
+				<button class="btn btn-default" type="button" onclick="zoomIn()" title="화면확대"><i class="fas fa-search-plus"></i></button> 
+			</div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="navbar nav-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="logo"><a href="/icerti/index.jsp"><img src="/icerti/common/img/logo.png" alt="인하대학교"></a></h1>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar b1"></span>
+                <span class="icon-bar b2"></span>
+                <span class="icon-bar b3"></span>
+            </button>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a id="menu_1_0" href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">증명서발급</a>
+                        <ul role="menu" class="dropdown-menu">
+                        	<li><a id="menu_1_1" href="/icerti/jsp/main/user/guide/certificate_userguide_01.jsp">이용안내</a></li>
+                            <li><a id="menu_1_2" href="/icerti//cert/certificateInfo.cert?cmd=getIssuedCondtionListAsColumn&method=internet">증명서 신청</a></li>
+                            <li><a id="menu_1_3" href="/icerti/cert/certificateStore.cert?cmd=getCertificateListFromStore">증명서 보관함</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="menu_2_1" href="https://www.inha.ac.kr/kr/1855/subview.do" target="_blank" class="dropdown-toggle">우편발송</a>
+                    </li>
+                    <li class="dropdown">
+                        <a id="menu_3_1" href="/icerti//cert/original.cert?cmd=compareOriginalForm"  class="dropdown-toggle">원본대조</a>
+                    </li>
+                    <li class="dropdown">
+                        <a id="menu_4_0" href="/icerti/jsp/main/user/supportcenter.jsp" class="dropdown-toggle" data-toggle="dropdown">고객센터</a>
+                        <ul role="menu" class="dropdown-menu">
+                        <li><a id="menu_4_1" href="/icerti/jsp/main/user/supportcenter.jsp">고객센터</a></li>
+                        <li><a id="menu_4_2" href="/icerti/jsp/main/user/faqs/FAQ_01.jsp">FAQ</a></li>
+                        <li><a id="menu_4_3" href="/icerti/jsp/main/user/remotesupport.jsp">원격지원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<script src="https://cert.inha.ac.kr/icerti/html5/js/crownix-viewer.min.js"></script>
+<script src="/icerti/js/common/utils/sha_util.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cert.inha.ac.kr/icerti/html5/css/crownix-viewer.min.css">
+<script>
+$(function() {
+	$(".input_comp").first().focus();
+	$(".input_comp").bind("keydown, keyup", function(e) {
+		var charLimit = $(this).attr("maxlength");
+		$(this).val($(this).val().replace(/[^A-Za-z0-9]/g,"").toUpperCase());
+		if ($(this).val().length >= charLimit) {
+			$(this).next('.input_comp').focus();
+			return false;
+		}
+	  });
+
+	$("#actionForm").submit(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var form = $(this);
+		var issuedNum = $("#issuedNum1").val() + "-" + $("#issuedNum2").val() + "-" + $("#issuedNum3").val() + "-" + $("#issuedNum4").val();
+		var params = form.serialize();
+		var url = form.attr('action') + "&t=" + Math.floor(Math.random() * 10000000000);
+	    $.ajax({
+			url: url,
+			type: 'POST',
+			data:params,
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			dataType: 'html',
+			success: function (result) {
+				if (result){
+					var resultArr = $.trim(result).split("|");
+
+					if (resultArr.length > 1){
+						if($("#lang") == "en"){
+							$(".cert_area").html(resultArr[2]);
+						}else{
+							$(".cert_area").html(resultArr[1]);
+						}
+						$("#Comp_Cert_View .modal-dialog").css("width", "fit-content");
+						sayMsg($(".cert_area").text());
+					}else{
+						$("#Comp_Cert_View .modal-dialog").css("width", "");
+						$(".cert_area").html(result);
+
+						viewer = new m2soft.crownix.Viewer('https://report.icerti.com/ReportingServer/service', 'crownix-viewer');
+						viewer.openFile("https://cert.inha.ac.kr/icerti/cert/m2/" + issuedNum + "/originalReport.mrd", "/rf [https://cert.inha.ac.kr/icerti/cert/issued.cert?cmd=getIssuedXMLByOriginal&issuedNum=" + issuedNum + "&encoding=UTF-8]  /rv NgmSsoName[CERTJSESSIONID] NgmSsoData[BD608DFE4D238D83286BADFFC8E714BE]", {
+							scrollbarOnViewer: {
+								width: '15px'
+							}
+						});
+						viewer.hideToolbar();
+			                }
+				}
+			}
+	    });
+	    $('#Comp_Cert_View').modal('show');
+	    e.preventDefault();
+	});
+});
+</script>
+
+
+
+
+
+<div id="content" class="swbg">
+    <div class="container">
+        <ul class="directory hidden-xs hidden-sm">
+            <li><img src="/icerti/common/img/home.png" alt="home"></li>
+            <li>원본대조</li>
+        </ul>
+        <div class="title">
+            <h1>원본대조</h1>
+            <p>인터넷을 통하여 24시간 언제, 어디서든 발급할 수 있습니다.</p>
+        </div>
+        <section class="exp clearfix active d-flex align-items-center">
+			<div class="exp_icon">
+				<i id="sayMsgIcon" title="클릭시 음성안내를 제공합니다." class="fas fa-volume-up"></i>
+			</div>
+			<div class="exp_text">
+              <ol>
+                <li><span>1단계</span><div class="exp_icon_text msgtext">발급받으신 증명서의 원본확인번호를 확인합니다.</div></li>
+                <li><span>2단계</span><div class="exp_icon_text msgtext">확인하신 원본확인번호를 아래 문서번호 입력란에 차례로 입력하신 후, Search 버튼을 누르시면 해당 증명서의 위변조 여부를 확인하실 수 있습니다.</div>
+                  <ul>
+                    <li class="exp_icon_text msgtext">증명서 조회 기간은 발급일로 부터 180일까지 조회가 가능합니다.</li>
+                    <li>증명서 우측 하단에 QR코드가 있는 경우에는 QR코드앱을 이용하면 손쉽게 입력이 가능합니다.</li>
+                  </ul>
+                </li>
+
+		<li style="padding-left:0">* <a href="/icerti/jsp/main/user/faqs/FAQ_01.jsp?tab=4&q=4#q-4-4">고객센터 - FAQ - 전자문서검증 - 증명서 진본확인 프로그램 설치 바로가기</a></li>
+
+              </ol>
+            </div>
+        </section>
+		<!-- <form id="actionForm"  action="/icerti/cert/original.cert?cmd=compareOriginalByIssuedNum" method="POST" autocomplete="off" onsubmit="return false;"> -->
+		<input type="hidden" name="sessID" value="CERTJSESSIONID">
+		<input type="hidden" name="sessData" value="BD608DFE4D238D83286BADFFC8E714BE">
+		<dl class="original_list">
+			<dt>원본내용 확인</dt>
+			<dd>
+				<div style="margin-top:0px;text-align:left;font-weight:600;">원본확인번호</div>
+					<div style="display:flex;align-items:center;flex-wrap: wrap;gap:5px">
+						<div style="display:flex;gap:5px;flex-wrap: wrap">
+							<input type="text" class="input_comp" name="issuedNum" id="issuedNum1" maxlength="4" value="A35A" required>
+							<input type="text" class="input_comp" name="issuedNum" id="issuedNum2" maxlength="5" value="0FA8B" required>
+							<input type="text" class="input_comp" name="issuedNum" id="issuedNum3" maxlength="4" value="C0F1" required>
+							<input type="text" class="input_comp" name="issuedNum" id="issuedNum4" maxlength="5" value="073A0" required>
+						</div>						
+						<a href="https://certinhaackr-icerticertoriginal.netlify.app/?doc=74596321">
+							<div class="btn_wrap" style="margin:0;width:unset">
+								<button  class="btn btn_style1">Search</button>							
+							</div>
+						</a>
+					</div>
+				</dd>
+			</dl>
+		<!-- </form> -->
+
+		<p style="margin-top:60px">* 원본확인 프로그램 설치가 불가능한 경우(맥, 리눅스, 모바일)는 아래와 같이 원본확인번호와 검증할 증명서 파일을 업로드하시면 원본 여부를 확인할 수 있습니다.</p>
+		<p style="color:red;">* 증명발급시스템에서 정식으로 발급받은 PDF 파일만 확인이 가능합니다. 출력물을 스캔해서 만든 PDF 파일은 불가합니다.</p>
+		<dl class="original_list">
+		<dt>원본파일 비교</dt>
+		<dd>
+			<div style="display:flex;flex-direction:column">
+				<div style="display:flex;gap:10px;align-items:center;flex-wrap: wrap;">
+					<div style="text-align:left;font-weight:600;">원본문서 </div>
+					<input type="file" id="orgfile" name="orgfile" value="" style="font-size:12px" accept=".pdf" onchange="hashfile(this)">
+				</div>
+				<div style="margin-top:0px;text-align:left;font-weight:600;">원본확인번호</div>
+				<div style="display:flex;align-items:center;flex-wrap: wrap;gap:5px">
+					<div style="display:flex;gap:5px;flex-wrap: wrap">
+						<input type="text" class="input_comp" name="fileissuedNum" id="fileissuedNum1" maxlength="4" value="" required>
+						<input type="text" class="input_comp" name="fileissuedNum" id="fileissuedNum2" maxlength="5" value="" required>
+						<input type="text" class="input_comp" name="fileissuedNum" id="fileissuedNum3" maxlength="4" value="" required>
+						<input type="text" class="input_comp" name="fileissuedNum" id="fileissuedNum4" maxlength="5" value="" required>
+					</div>
+					<div class="btn_wrap" style="margin:0;width:unset">
+						<button type="button" class="btn btn_style1" onclick="checkFile()">확인</button>
+					</div>
+				</div>
+			</div>
+		</dd>
+	</dl>
+    </div>
+    <!-- 레이어팝업 -->
+<div class="modal fade ly_cont" id="Comp_Cert_View">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="submit" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+      <div class="modal-title">	원본조회 결과</div>
+      </div>
+      <div class="modal-body">
+          <div class="text_area cert_area">
+            	잠시만 기다려 주십시요.
+          </div>
+      </div>
+      <div class="modal-footer" style="border-top:0;"></div>
+    </div>
+  </div>
+</div><!--//ly_cont-->
+
+<!-- 검색결과 없음 -->
+<div class="no_search_result">
+	<div class="wrap">
+	  <i class="fa fa-search search-1"></i>
+	  <i class="fa fa-search search-2"></i>
+	  <i class="fa fa-search search-3"></i>
+	  <i class="fa fa-search search-4"></i>
+	  <div class="items">
+	    <i class="fa fa-file-o"></i>
+	    <i class="fa fa-file-archive-o"></i>
+	    <i class="fa fa-file-code-o"></i>
+	    <i class="fa fa-file-excel-o"></i>
+	    <i class="fa fa-file-image-o"></i>
+	  </div>
+	</div>
+	<p style="margin-bottom:25px">&nbsp;</p>
+	<h4>조회 결과가 없습니다.</h4>
+	<p><small><em>증명서의 조회번호를 확인 해 주십시오. <br/>* 증명서의 발급일이 180일 경과 한 경우에도 조회가 불가능 합니다.</em></small></p>
+	<p>&nbsp;</p>
+</div>
+
+</div>
+<script>
+$(document).ready(function(){
+/* 	$(document).on("click", "body *:not('button')", function(event){
+		if(event.target.id == "sayMsgIcon" || event.target.id == "sayMsgOnOffIcon" || $(event.target).find("#sayMsgIcon").length > 0 || $(event.target.type) == "button"){
+			return;
+		}
+		if(!doneMsg){
+			let msg = objectTextToArray($(".exp_text .msgtext")).join("\n");
+			sayMsg(msg, 0);
+			doneMsg = true;
+		}
+	});*/
+});
+</script>
+
+
+<!--footer-->
+<script>
+function show(){
+	
+	var offhide = document.getElementById("officeshow");
+	
+	if(offhide.style.display == "none"){
+		offhide.style.display = 'block';
+	}else{
+		offhide.style.display = 'none';
+	}
+}
+
+</script>
+
+<footer>
+	<div class="container footwrap">
+		<div class="row" style="font-size:12px;">
+			<div class="address col-xs-12 col-sm-9 col-md-9 col-lg-9">
+				<p>▶ 인하대학교</p>
+				<p> (우)22212, 인천광역시 미추홀구 인하로 100 TEL : 032-860-7114  FAX : 032-863-1333</p>
+				<p class="cont" style="color:blue">
+				<a href="https://www.inha.ac.kr/kr/927/subview.do" target="_new" style="color:blue">개인정보처리방침</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<address class="address col-xs-12 col-sm-9 col-md-9 col-lg-9">
+				<p><a href="javascript:void(0)" onclick="show()">▶ (주)아이서티 회사정보 보기</a> </p>
+				<div id="officeshow" style="display:none">
+				<p>대표 : 김영후 | 사업자등록번호 : 107-87-42618 | 기업부설연구소 : 제20111110635호</p>
+				<p>통신판매업 제 2020-대전유성-1627호 | 직접생산자확인 제2011-06353호</p>
+				<p>주소 : 04788 서울특별시 성동구 광나루로 130(성수동1가, 서울숲IT캐슬) 1201호</p>
+				</div>
+				<p>고객지원센터 : <a href="tel:15445973">1544-5973</a>    Fax : 02-458-8085</p>
+				<p class="copy">Copyrightⓒ2018 by <span>Icerti Co.,LTD.</span> All rights reserved. </p>
+			</address>
+			<div class="footlogo col-xs-12 col-sm-3 col-md-3 col-lg-3">
+			<img src="/icerti/common/img/footlogo.png" alt="logo">
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PQ29S45X8"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag("js", new Date());gtag("config", "G-8PQ29S45X8");</script>
+</div>
+</body>
+</html>
